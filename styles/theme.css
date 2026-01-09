@@ -1,0 +1,37 @@
+:root {
+  --bg: radial-gradient(circle at top, #f7f8ff 0%, #eef0ff 45%, #e7ebff 100%);
+  --surface: #ffffff;
+  --surface-strong: #f0f2ff;
+  --surface-soft: #f7f8ff;
+  --text: #2b2f44;
+  --muted: #6a6f8c;
+  --accent: #6a6dff;
+  --accent-strong: #4a4dff;
+  --warning: #f49ac1;
+  --shadow: 0 20px 50px rgba(90, 96, 160, 0.18);
+  --radius: 18px;
+}
+
+.bg-orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(0px);
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.orb-1 {
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(106, 109, 255, 0.35), transparent 70%);
+  top: -80px;
+  right: -120px;
+}
+
+.orb-2 {
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, rgba(109, 169, 255, 0.25), transparent 70%);
+  bottom: -90px;
+  left: -120px;
+}

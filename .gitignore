@@ -1,0 +1,56 @@
+# OS Files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.sublime-workspace
+.sublime-project
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary Files
+*.tmp
+*.temp
+.cache/
+
+# Environment Variables
+.env
+.env.local
+.env.production
+
+# Node modules (if added in future)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build outputs (if build step added in future)
+dist/
+build/
+*.min.js
+*.min.css
+
+# Test Coverage
+coverage/
+.nyc_output/
+
+# Personal Notes (Turkish documentation - keep local only)
+Porject Overview.md
+REFACTORING_GUIDE.md
+REFACTORING_SUMMARY.md
+QUICK_REFERENCE.md
+DESIGN_ENHANCEMENTS.md
+ENHANCED_VISUALS_GUIDE.md
+
+# Backup Files
+*.bak
+*.backup
