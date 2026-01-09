@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dicedr</title>
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/theme.css" />
+    <link rel="stylesheet" href="styles/layout.css" />
+    <link rel="stylesheet" href="styles/components.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+
+    <div class="phone-shell">
+      <header class="app-header">
+        <div class="brand">
+          <span class="brand-mark">D</span>
+          <div>
+            <div class="brand-title" data-i18n="home.title">Dicedr</div>
+            <div class="brand-sub" data-i18n="home.subtitle">
+              Decide in one tap.
+            </div>
+          </div>
+        </div>
+        <div class="lang-toggle">
+          <button class="ghost" data-lang="en">EN</button>
+          <button class="ghost" data-lang="tr">TR</button>
+        </div>
+      </header>
+
+      <main id="app" class="app-main"></main>
+
+      <footer class="sticky-run">
+        <button id="runButton" class="primary" disabled>
+          <span data-i18n="common.run">Run</span>
+        </button>
+      </footer>
+    </div>
+
+    <script type="application/json" id="i18n-en">
+      {
+        "home.title": "Dicedr",
+        "home.subtitle": "Decide in one tap.",
+        "home.recent": "Recent",
+        "home.methods": "Methods",
+        "home.open": "Open",
+        "common.run": "Run",
+        "common.reset": "Reset",
+        "common.shuffle": "Shuffle",
+        "common.removeDup": "Remove duplicates",
+        "common.example": "Example fill",
+        "common.inputs": "Inputs",
+        "common.settings": "Settings",
+        "result.title": "Result",
+        "result.again": "Again",
+        "result.edit": "Edit",
+        "result.share": "Share",
+        "history.title": "History",
+        "history.empty": "No runs yet",
+        "method.wheel.title": "Wheel",
+        "method.wheel.subtitle": "Spin a list",
+        "method.random.title": "Random Picker",
+        "method.random.subtitle": "Pick 1 or N",
+        "method.coin.title": "Coin Flip",
+        "method.coin.subtitle": "Heads or tails",
+        "method.dice.title": "Dice",
+        "method.dice.subtitle": "Roll a number",
+        "method.slot.title": "Slot",
+        "method.slot.subtitle": "Three reels",
+        "inputs.placeholder": "Enter one item per line",
+        "inputs.empty": "Add at least 2 items",
+        "coin.labelA": "Heads",
+        "coin.labelB": "Tails",
+        "dice.preset": "Preset",
+        "dice.custom": "Custom",
+        "dice.min": "Min",
+        "dice.max": "Max",
+        "dice.count": "Dice count",
+        "dice.total": "Total",
+        "picker.count": "Pick count",
+        "settings.noRepeat": "No repeat",
+        "share.copied": "Link copied"
+      }
+    </script>
+    <script type="application/json" id="i18n-tr">
+      {
+        "home.title": "Dicedr",
+        "home.subtitle": "Tek dokunuşta karar ver.",
+        "home.recent": "Son",
+        "home.methods": "Yontemler",
+        "home.open": "Ac",
+        "common.run": "Calistir",
+        "common.reset": "Sifirla",
+        "common.shuffle": "Karistir",
+        "common.removeDup": "Tekrarlari sil",
+        "common.example": "Ornek doldur",
+        "common.inputs": "Girdiler",
+        "common.settings": "Ayarlar",
+        "result.title": "Sonuc",
+        "result.again": "Tekrar",
+        "result.edit": "Duzenle",
+        "result.share": "Paylas",
+        "history.title": "Gecmis",
+        "history.empty": "Henuz calisma yok",
+        "method.wheel.title": "Cark",
+        "method.wheel.subtitle": "Listeyi dondur",
+        "method.random.title": "Rastgele Secici",
+        "method.random.subtitle": "1 veya N sec",
+        "method.coin.title": "Yazi Tura",
+        "method.coin.subtitle": "Iki secenek",
+        "method.dice.title": "Zar",
+        "method.dice.subtitle": "Sayi at",
+        "method.slot.title": "Slot",
+        "method.slot.subtitle": "Uc makara",
+        "inputs.placeholder": "Her satira bir oge",
+        "inputs.empty": "En az 2 oge ekle",
+        "coin.labelA": "Yazi",
+        "coin.labelB": "Tura",
+        "dice.preset": "Hazir",
+        "dice.custom": "Ozel",
+        "dice.min": "Min",
+        "dice.max": "Max",
+        "dice.count": "Zar sayisi",
+        "dice.total": "Toplam",
+        "picker.count": "Secim sayisi",
+        "settings.noRepeat": "Tekrar yok",
+        "share.copied": "Baglanti kopyalandi"
+      }
+    </script>
+
+    <script src="js/bundle.js"></script>
+  </body>
+</html>

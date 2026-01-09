@@ -1,0 +1,60 @@
+.phone-shell {
+  width: min(480px, 100%);
+  background: var(--surface);
+  border-radius: 28px;
+  border: 1px solid rgba(106, 109, 255, 0.15);
+  box-shadow: var(--shadow);
+  padding: 22px 18px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  gap: 12px;
+}
+
+.brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.brand-mark {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(140deg, var(--accent), #98f1df);
+  color: #0b1412;
+  font-weight: 700;
+}
+
+.brand-title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.brand-sub {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-height: 420px;
+}
+
+.sticky-run {
+  position: absolute;
+  bottom: 18px;
+  left: 0;
+  right: 0;
+  padding: 0 20px;
+}

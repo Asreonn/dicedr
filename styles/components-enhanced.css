@@ -1,0 +1,667 @@
+/**
+ * DICEDR ENHANCED COMPONENTS
+ * Premium visual design with gradient overlays and depth
+ */
+
+/* ============================================
+   BUTTONS - PREMIUM FEEL
+   ============================================ */
+
+.primary,
+.secondary,
+.ghost {
+  border-radius: 16px;
+  padding: 14px 24px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  font-size: 15px;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  position: relative;
+  overflow: hidden;
+}
+
+.primary {
+  background: linear-gradient(135deg, #6a6dff 0%, #98f1df 100%);
+  color: #0b1412;
+  width: 100%;
+  box-shadow:
+    0 10px 30px rgba(106, 109, 255, 0.4),
+    0 5px 15px rgba(106, 109, 255, 0.2);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow:
+    0 15px 40px rgba(106, 109, 255, 0.5),
+    0 8px 20px rgba(106, 109, 255, 0.3);
+}
+
+.primary:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+  background: linear-gradient(135deg, #9ca0ff 0%, #c0e9e0 100%);
+}
+
+.primary::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.6s ease;
+  border-radius: 50%;
+}
+
+.primary:hover:not(:disabled)::after {
+  transform: translate(-50%, -50%) scale(2);
+}
+
+.secondary {
+  background: linear-gradient(135deg, rgba(106, 109, 255, 0.1), rgba(152, 241, 223, 0.1));
+  border: 2px solid rgba(106, 109, 255, 0.3);
+  backdrop-filter: blur(10px);
+  color: var(--text);
+  font-weight: 600;
+}
+
+.secondary:hover {
+  background: linear-gradient(135deg, rgba(106, 109, 255, 0.2), rgba(152, 241, 223, 0.2));
+  border-color: rgba(106, 109, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.ghost {
+  background: transparent;
+  color: var(--muted);
+  border: 2px solid transparent;
+}
+
+.ghost.active {
+  color: var(--text);
+  border-color: var(--accent);
+  background: rgba(106, 109, 255, 0.08);
+}
+
+.ghost:hover {
+  background: rgba(106, 109, 255, 0.05);
+  color: var(--text);
+}
+
+/* ============================================
+   SECTIONS - DEPTH & LAYERING
+   ============================================ */
+
+.section {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(247, 248, 255, 0.8) 100%
+  );
+  border-radius: 20px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border: 2px solid rgba(106, 109, 255, 0.15);
+  box-shadow:
+    0 10px 30px rgba(106, 109, 255, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  position: relative;
+  overflow: hidden;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(106, 109, 255, 0.5),
+    transparent
+  );
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    var(--accent),
+    transparent
+  );
+}
+
+/* Hide empty sections */
+.section:empty {
+  display: none;
+}
+
+/* ============================================
+   METHOD CARDS - PREMIUM CARDS
+   ============================================ */
+
+.method-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.method-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(247, 248, 255, 0.9) 100%
+  );
+  padding: 16px;
+  border-radius: 18px;
+  border: 2px solid rgba(106, 109, 255, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    0 5px 20px rgba(106, 109, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.method-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--accent), rgba(152, 241, 223, 1));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.method-card:hover::before {
+  opacity: 1;
+}
+
+.method-card:hover {
+  border-color: rgba(106, 109, 255, 0.4);
+  box-shadow:
+    0 10px 35px rgba(106, 109, 255, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+/* ============================================
+   METHOD VISUAL - SHOWCASE AREA
+   ============================================ */
+
+.method-visual {
+  background: linear-gradient(
+    180deg,
+    rgba(106, 109, 255, 0.12) 0%,
+    rgba(152, 241, 223, 0.08) 100%
+  );
+  border-radius: 20px;
+  padding: 32px 24px;
+  text-align: center;
+  min-height: 240px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  gap: 16px;
+  overflow: hidden;
+  border: 2px solid rgba(106, 109, 255, 0.15);
+  box-shadow:
+    inset 0 2px 10px rgba(106, 109, 255, 0.1),
+    0 5px 20px rgba(106, 109, 255, 0.05);
+}
+
+.method-visual::before {
+  content: '';
+  position: absolute;
+  inset: -100% -10% auto -10%;
+  height: 300px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(106, 109, 255, 0.3) 0%,
+    rgba(152, 241, 223, 0.15) 50%,
+    transparent 100%
+  );
+  opacity: 0.8;
+  animation: glowDrift 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.method-visual > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Don't show visual container if empty */
+.method-visual:empty {
+  display: none;
+}
+
+/* ============================================
+   COIN FACE - REALISTIC COIN
+   ============================================ */
+
+.coin-face {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(
+      circle at 35% 35%,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(152, 241, 223, 0.4) 40%,
+      rgba(106, 109, 255, 0.3) 100%
+    );
+  border: 6px solid rgba(106, 109, 255, 0.3);
+  box-shadow:
+    0 15px 40px rgba(106, 109, 255, 0.4),
+    inset 0 0 30px rgba(255, 255, 255, 0.5),
+    inset -10px -10px 20px rgba(106, 109, 255, 0.2),
+    inset 10px 10px 20px rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 900;
+  font-size: 16px;
+  color: #4a4dff;
+  text-shadow:
+    0 2px 4px rgba(255, 255, 255, 0.8),
+    0 -1px 2px rgba(106, 109, 255, 0.5);
+}
+
+/* ============================================
+   DICE - 3D REALISTIC DICE
+   ============================================ */
+
+.dice-tray {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.dice-unit {
+  width: 90px;
+  height: 90px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(247, 248, 255, 0.95) 100%
+    );
+  border: 3px solid rgba(106, 109, 255, 0.2);
+  box-shadow:
+    0 10px 30px rgba(106, 109, 255, 0.2),
+    inset 5px 5px 10px rgba(255, 255, 255, 0.8),
+    inset -5px -5px 10px rgba(106, 109, 255, 0.1);
+  position: relative;
+}
+
+.dice-unit::before {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border-radius: 12px;
+  border: 1px solid rgba(106, 109, 255, 0.1);
+}
+
+.dice-pips {
+  width: 80px;
+  height: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  padding: 8px;
+}
+
+.pip {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--text) 0%, #2b2f44 100%);
+  place-self: center;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.2),
+    inset 0 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+/* ============================================
+   WHEEL - ENHANCED CANVAS CONTAINER
+   ============================================ */
+
+.wheel-rotator {
+  position: relative;
+  filter: drop-shadow(0 10px 25px rgba(106, 109, 255, 0.3));
+}
+
+.wheel-canvas {
+  width: 100%;
+  max-width: 260px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 8px rgba(106, 109, 255, 0.1),
+    0 0 0 16px rgba(106, 109, 255, 0.05);
+}
+
+/* ============================================
+   SLOT MACHINE - VEGAS STYLE
+   ============================================ */
+
+.slot-reels {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  width: 100%;
+  padding: 8px;
+  background: linear-gradient(
+    135deg,
+    rgba(106, 109, 255, 0.08) 0%,
+    rgba(152, 241, 223, 0.05) 100%
+  );
+  border-radius: 16px;
+  border: 2px solid rgba(106, 109, 255, 0.15);
+}
+
+.slot-reel {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(247, 248, 255, 0.8) 100%
+  );
+  border-radius: 14px;
+  padding: 10px;
+  height: 140px;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid rgba(106, 109, 255, 0.2);
+  box-shadow:
+    inset 0 2px 10px rgba(106, 109, 255, 0.15),
+    0 5px 15px rgba(106, 109, 255, 0.1);
+}
+
+.slot-reel::before,
+.slot-reel::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 30px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.slot-reel::before {
+  top: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(247, 248, 255, 0.9) 0%,
+    transparent 100%
+  );
+}
+
+.slot-reel::after {
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(247, 248, 255, 0.9) 0%,
+    transparent 100%
+  );
+}
+
+.slot-track {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.slot-item {
+  padding: 8px 14px;
+  background: linear-gradient(
+    135deg,
+    rgba(106, 109, 255, 0.1) 0%,
+    rgba(152, 241, 223, 0.08) 100%
+  );
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid rgba(106, 109, 255, 0.15);
+  box-shadow: 0 2px 5px rgba(106, 109, 255, 0.1);
+  white-space: nowrap;
+  min-width: 60px;
+  text-align: center;
+}
+
+/* ============================================
+   MODAL - DRAMATIC REVEAL
+   ============================================ */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(3, 6, 12, 0.85) 0%,
+      rgba(43, 47, 68, 0.9) 100%
+    );
+  backdrop-filter: blur(10px);
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.modal.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.98) 0%,
+    rgba(247, 248, 255, 0.95) 100%
+  );
+  border-radius: 28px;
+  padding: 32px 24px;
+  width: min(400px, 92vw);
+  text-align: center;
+  position: relative;
+  box-shadow:
+    0 25px 60px rgba(106, 109, 255, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+  border: 2px solid rgba(106, 109, 255, 0.2);
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 16px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.modal-result {
+  font-size: 38px;
+  font-weight: 900;
+  margin-bottom: 24px;
+  color: var(--accent);
+  text-shadow: 0 2px 10px rgba(106, 109, 255, 0.3);
+  line-height: 1.2;
+  word-break: break-word;
+}
+
+.modal-actions {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+/* ============================================
+   INPUT ENHANCEMENTS
+   ============================================ */
+
+textarea {
+  width: 100%;
+  min-height: 180px;
+  resize: vertical;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid rgba(106, 109, 255, 0.2);
+  border-radius: 16px;
+  padding: 16px;
+  color: var(--text);
+  transition: all 0.3s ease;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: rgba(106, 109, 255, 0.6);
+  background: rgba(255, 255, 255, 1);
+  box-shadow:
+    0 0 0 4px rgba(106, 109, 255, 0.1),
+    0 5px 20px rgba(106, 109, 255, 0.15);
+}
+
+.input-actions button {
+  background: linear-gradient(
+    135deg,
+    rgba(106, 109, 255, 0.1) 0%,
+    rgba(152, 241, 223, 0.08) 100%
+  );
+  font-size: 12px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(106, 109, 255, 0.2);
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.input-actions button:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(106, 109, 255, 0.2) 0%,
+    rgba(152, 241, 223, 0.15) 100%
+  );
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(106, 109, 255, 0.2);
+}
+
+/* ============================================
+   HISTORY ITEMS
+   ============================================ */
+
+.history-item {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(247, 248, 255, 0.8) 100%
+  );
+  padding: 14px 16px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid rgba(106, 109, 255, 0.15);
+  transition: all 0.2s ease;
+}
+
+.history-item:hover {
+  border-color: rgba(106, 109, 255, 0.3);
+  transform: translateX(4px);
+  box-shadow: 0 5px 15px rgba(106, 109, 255, 0.1);
+}
+
+/* ============================================
+   TOAST - PREMIUM NOTIFICATION
+   ============================================ */
+
+.toast {
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.98) 0%,
+    rgba(247, 248, 255, 0.95) 100%
+  );
+  padding: 14px 24px;
+  border-radius: 999px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  border: 2px solid rgba(106, 109, 255, 0.3);
+  box-shadow:
+    0 10px 30px rgba(106, 109, 255, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+  font-weight: 600;
+  color: var(--accent);
+  backdrop-filter: blur(10px);
+  z-index: 9999;
+}
+
+.toast.show {
+  opacity: 1;
+}
+
+/* ============================================
+   EMPTY STATE HIDING
+   ============================================ */
+
+/* Hide sections with no meaningful content */
+.section:has(> .section-title:only-child) {
+  display: none;
+}
+
+/* Hide visual containers with only placeholder text */
+.method-visual:has(> [data-role]:only-child) {
+  min-height: 180px;
+}
