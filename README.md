@@ -4,7 +4,7 @@
 
 A mobile-first, visual-heavy decision and party-game website. Pick a method (Wheel, Dice, Coin Flip, Slot Machine, Random Picker), add your options, hit run, and get an animated, satisfying result.
 
-🌐 **[Live Demo](#)** | 📖 **[Documentation](#features)** | 🎨 **[Screenshots](#screenshots)**
+🌐 **[Live Demo](https://asreonn.github.io/dicedr/)** | 📖 **[Documentation](#features)** | 🎨 **[Screenshots](#screenshots)**
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![No Build Required](https://img.shields.io/badge/Build-Not%20Required-brightgreen)]()
@@ -51,7 +51,7 @@ A mobile-first, visual-heavy decision and party-game website. Pick a method (Whe
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/dicedr.git
+git clone https://github.com/Asreonn/dicedr.git
 cd dicedr
 
 # Open in browser (or use any static server)
@@ -324,8 +324,8 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ## 📞 Support
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/dicedr/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/dicedr/discussions)
+- **Issues**: [GitHub Issues](https://github.com/Asreonn/dicedr/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/Asreonn/dicedr/discussions)
 
 ---
 
