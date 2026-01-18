@@ -280,7 +280,6 @@ Edit `styles/animations.css` for timing and easing curves.
 
 ## 📚 Documentation
 
-- **[CLAUDE.md](CLAUDE.md)** - Project guidance for AI assistants
 - **[ARCHITECTURE.md](ARCHITECTURE.md)** - System architecture diagrams
 - **[REFACTORING_GUIDE.md](REFACTORING_GUIDE.md)** - Code quality improvements
 - **[DESIGN_ENHANCEMENTS.md](DESIGN_ENHANCEMENTS.md)** - Visual design system
